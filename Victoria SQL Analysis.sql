@@ -4,6 +4,7 @@ USE redata;
 
 -- Imported table data, now checking data looks accurate
 SELECT * FROM victoria;
+
 -- Dropping timestamp from Dates
 ALTER TABLE Victoria MODIFY COLUMN SoldDate DATE, MODIFY COLUMN ListDate DATE;
 
