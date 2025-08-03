@@ -25,6 +25,7 @@ SELECT SoldDate, SoldPrice, SUM(SoldPrice) OVER(ORDER BY SoldDate, Agency) AS Ru
 
 -- Total Sales for each city
 SELECT City, SUM(soldprice) Volume FROM Victoria GROUP BY City ORDER BY Volume DESC;
+
 -- Total Sales for each city by active sales year
 SELECT City, SUM(soldprice) Volume FROM Victoria WHERE YEAR(SoldDate) = 2017 GROUP BY City ORDER BY Volume DESC;
 SELECT City, SUM(soldprice) Volume FROM Victoria WHERE YEAR(SoldDate) = 2018 GROUP BY City ORDER BY Volume DESC;
